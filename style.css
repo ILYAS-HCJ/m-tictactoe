@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    padding: 0 40px;
+    background-color: black;
+    height: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-family: "Baloo 2", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.line {
+    background-color: rgb(173, 134, 236);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease;
+}
+
+.box {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+
+}
+
+.box:hover {
+    background-color: rgb(236, 210, 236);
+    cursor: pointer;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.gameInfo {
+    padding: 0 2vw;
+}
+
+.imgBox img {
+    width: 0;
+    transition: width .8s ease-in-out;
+}
+
+.info {
+    font-size: 22px;
+}
+
+#reset {
+    padding: 7px 17px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgb(230, 185, 230);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#reset:hover {
+    background-color: rgb(228, 167, 228);
+
+}
+
+@media screen and (max-width: 900px) {
+    .gameContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* It makes the finishing line out of its position
+     .container {
+        display: grid;
+        grid-template-rows: repeat(3, 16vw);
+        grid-template-columns: repeat(3, 16vw);
+    } */
+
+    .gameInfo {
+        margin-top: 5vh;
+    }
+
+    .gameInfo h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .gameInfo h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* It makes the finishing line out of its position
+     .container {
+        display: grid;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    } */
+
+    .gameInfo h1 {
+        font-size: 1.4rem;
+    }
+}
